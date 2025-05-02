@@ -294,6 +294,21 @@ button + button:hover {
   background-color: #005fa3;
 }
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.212);
+  color: #fff;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  font-weight: 300;
+  backdrop-filter: blur(5px);
+  z-index: 999;
+}
+
+
 /* Animação de entrada suave */
 @keyframes fadeIn {
   from {
