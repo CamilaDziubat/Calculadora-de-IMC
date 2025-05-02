@@ -1,0 +1,324 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('/img/pngtree-vector-design-background-medical-instruments-for-vaccine-picture-image_1204718.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 400px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input label {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.input input {
+  height: 30px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  height: 50px;  /* Aumentei a altura para ficar mais proporcional */
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;  /* Espaço entre os botões */
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+button + button {
+  background-color: #ccc;
+  color: #000;
+}
+
+button + button:hover {
+  background-color: #aaa;
+}
+
+
+.result {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  font-style: italic;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100%;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .input input,
+  button {
+    font-size: 1rem;
+  }
+}
+
+/* MODAL: Resultado em destaque fora da calculadora */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); /* fundo escuro com transparência */
+  backdrop-filter: blur(6px); /* aplica desfoque no fundo */
+  display: none; /* começa escondido */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Caixa do resultado */
+.modal {
+  background-color: #f5f5f5;
+  color: #000;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  width: 320px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.modal button {
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal button:hover {
+  background-color: #005fa3;
+}/* Overlay que cobre a tela toda com desfoque */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Caixa de resultado no centro */
+.modal {
+  background-color: #f5f5f5;
+  color: #000;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  width: 300px;
+  text-align: center;
+}
+
+.modal p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.modal button {
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal button:hover {
+  background-color: #005fa3;
+}
+
+
+/* Animação de entrada suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 480px) {
+  .modal {
+    padding: 20px 15px;
+    width: 90%;
+  }
+
+  .modal p {
+    font-size: 1rem;
+  }
+
+  .modal button {
+    font-size: 1rem;
+  }
+}
+/* MODAL: Resultado em destaque fora da calculadora */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); /* fundo escuro com transparência */
+  backdrop-filter: blur(6px); /* aplica desfoque no fundo */
+  display: none; /* começa escondido */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Caixa do resultado */
+.modal {
+  background-color: #f5f5f5;
+  color: #000;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  width: 320px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.modal button {
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal button:hover {
+  background-color: #005fa3;
+}
+
+/* Animação de entrada suave */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 480px) {
+  .modal {
+    padding: 20px 15px;
+    width: 90%;
+  }
+
+  .modal p {
+    font-size: 1rem;
+  }
+
+  .modal button {
+    font-size: 1rem;
+  }
+}
+
