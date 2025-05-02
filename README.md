@@ -1,4 +1,4 @@
-# Calculadora de IMC - Projeto Web
+# Calculadora de IMC - Projeto Web --> Deploy --> https://calculadoraimcmedical.netlify.app
 
 ## Descrição
 
@@ -29,7 +29,7 @@ Este projeto consiste em uma **Calculadora de IMC** (Índice de Massa Corporal) 
 4.Para refazer o cálculo, basta fechar o resultado e preencher os campos novamente.
 
 
-##Imagem de Demonstração
+## Imagem de Demonstração
 ![image](https://github.com/user-attachments/assets/74ba7a23-49b3-42a7-97ac-5d33dd18b3ce)
 
 ## Melhorias Futuras
@@ -39,6 +39,6 @@ Validação Avançada: Melhorar a validação dos dados de entrada (por exemplo,
 
 Design Personalizável: Permitir que o usuário personalize o tema da calculadora (cores e fontes).
 
-##Conclusão
+## Conclusão
 Este projeto é uma aplicação simples, mas altamente funcional, que demonstra habilidades essenciais de desenvolvimento web, incluindo HTML, CSS e JavaScript, além de práticas como validação de formulários, responsividade e manipulação de eventos DOM. Ideal para quem deseja aprender ou demonstrar conhecimentos na criação de interfaces de usuário interativas e modernas.
 
